@@ -27,13 +27,11 @@ Il se compose de plusieurs colonnes :
 - **Progress**
 - **Done**
 
-
-
 ---
 
 ## Répartition des rôles (Sprint 0)
 
-Scrum Master: 
+Scrum Master: Lucas Couraudon
 
 ---
 
@@ -45,7 +43,7 @@ Scrum Master:
 
 ---
 
-## Prochaines étapes (Sprint 2)
+## Prochaines étapes (Sprint 1)
 
 - Démarrer le développement du premier mini-jeu
 - Finaliser les user stories principales

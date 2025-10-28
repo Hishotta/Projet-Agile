@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Compile and et joue au jeu
+# Compile et joue au jeu
 
-javac -d bin src/main/Main.java
-java -cp bin main.Main
+javac -d bin -cp src src/main/Main.java
+java -cp bin:src/* main.Main
