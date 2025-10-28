@@ -2,36 +2,39 @@ package main;
 
 public class Argent {
 
-    private double montant;
+    protected double solde = 1000;
 
-    public Argent(double montant) {
-        this.montant = montant;
+    public double getSolde() {
+        return solde;
     }
 
-    public Argent() {
-        this.montant = 100;
+    public void setSolde(double montant) {
+        this.solde = montant;
     }
 
-    public double getMontant() {
-        return montant;
+    public void ajouterSolde(double montant) {
+        this.solde += montant;
     }
 
-    public void setMontant(double montant) {
-        this.montant = montant;
+    public boolean retirerSolde(double montant) {
+        if (this.solde >= montant) {
+            this.solde -= montant;
+            return true;
+        }
+        System.out.println("Solde insuffisant...");
+        return false;
     }
 
     public void AppliquerBonus(double bonus) {
-        this.setMontant(this.getMontant() + bonus);
+        this.ajouterSolde(bonus);
     }
 
     public void AppliquerMalus(double malus) {
-        this.setMontant(this.getMontant() - malus);
+        this.retirerSolde(malus);
     }
 
     @Override
     public String toString() {
-        return "Argent{" +
-                "montant=" + montant +
-                '}';
+        return this.solde+"€";
     }
 }

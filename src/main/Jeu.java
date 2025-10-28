@@ -1,18 +1,21 @@
 package main;
 
 public abstract class Jeu {
+
     Player player;
 
-
-    void retirer_argent(double mise){
-        player.setMonaie(player.getMonaie()-mise);
+    public double getSolde() {
+        return player.solde.getSolde();
     }
 
-    void ajout_argent(double mise){
-        player.setMonaie(player.getMonaie()+mise);
+    public boolean perte(double mise) {
+        return player.solde.retirerSolde(mise);
     }
 
-    abstract void ajout_xp();
+    public void gain(double mise) {
+        player.solde.ajouterSolde(mise);
+    }
 
-    
+    // void ajout_xp();
+
 }
